@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Merv AI - Full Screen Chatbot</title>
+
+  <!-- iOS PWA Meta Tags -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Merv AI">
+
+  <!-- App Icon for iOS -->
+  <link rel="apple-touch-icon" href="icon-192.png">
+
+  <!-- Manifest for Android & Desktop PWAs -->
+  <link rel="manifest" href="manifest.json">
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      background: #000;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    .chatbot-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Button container on the far left, vertically centered */
+    .button-container {
+      position: fixed;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 9999; /* on top of iframe */
+    }
+
+    .button-container a {
+      display: block;
+      background-color: #000000; /* black buttons */
+      color: #ffffff; /* white text */
+      padding: 10px 15px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      text-align: center;
+      transition: background-color 0.2s;
+    }
+
+    .button-container a:hover {
+      background-color: #333333; /* slightly lighter black on hover */
+    }
+  </style>
+</head>
+<body>
+  <div class="chatbot-container">
+    <iframe 
+      id="JotFormIFrame-0199209121fb72149d7273217c85b9d7c141"
+      title="Merv AI"
+      allow="geolocation; microphone; camera; fullscreen"
+      src="https://agent.jotform.com/0199209121fb72149d7273217c85b9d7c141?embedMode=iframe&background=1&shadow=0">
+    </iframe>
+  </div>
+
+  <!-- Left-side black buttons -->
+  <div class="button-container">
+    <a href="https://eli4224224-lang.github.io/notes/" target="_blank">Go to Merv Notes</a>
+    <a href="https://eli4224224-lang.github.io/TuffGames/" target="_blank">Go to Merv Games</a>
+  </div>
+</body>
+</html>
